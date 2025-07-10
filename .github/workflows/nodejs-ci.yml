@@ -35,4 +35,4 @@ jobs:
         run: |
           node server.js &
           sleep 5
-          curl -I http://localhost:3000
+          curl -v http://localhost:3000
