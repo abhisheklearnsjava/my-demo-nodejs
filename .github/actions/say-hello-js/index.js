@@ -6,7 +6,7 @@ try {
   if (!name.match(/^[A-Za-z]+$/)) {
     core.setFailed(`Invalid name: ${name}`);
   } else {
-    console.log(`Hello, ${name}! 👋`);
+    console.log(`Hello from JAVA SCRIPT ACTION, ${name}! 👋`);
   }
 } catch (error) {
   core.setFailed(error.message);
