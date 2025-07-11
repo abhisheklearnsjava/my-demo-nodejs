@@ -14,7 +14,7 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                cmd 'npm install'
+                bat 'npm install'
             }
         }
 
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Start app') {
             steps {
-                cmd 'npm start'
+                bat 'npm start'
             }
         }
     }
