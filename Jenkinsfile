@@ -1,10 +1,10 @@
 pipeline {
     agent any
 
-    environment {
+   // environment {
        // PATH = "/opt/homebrew/bin:$PATH"
         
-    }
+    //}
 
     parameters {
         string(name: 'BRANCH_NAME', defaultValue: 'main', description: 'Enter the Git branch to build')
