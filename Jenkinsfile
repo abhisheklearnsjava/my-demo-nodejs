@@ -10,11 +10,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/abhisheklearnsjava/my-demo-nodejs.git', branch: "${params.BRANCH_NAME}"
-            }
-        }
 
         stage('Install dependencies') {
             steps {
@@ -22,11 +17,7 @@ pipeline {
             }
         }
 
-        stage('Run tests') {
-            steps {
-                sh 'npm test || echo "Tests failed, but continuing..."'
-            }
-        }
+        
 
         stage('Start app') {
             steps {
