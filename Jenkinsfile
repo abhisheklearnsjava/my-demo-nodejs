@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {
-        PATH = "/opt/homebrew/bin:$PATH"
+       // PATH = "/opt/homebrew/bin:$PATH"
+        
     }
 
     parameters {
@@ -13,7 +14,7 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                sh 'npm install'
+                cmd 'npm install'
             }
         }
 
@@ -21,7 +22,7 @@ pipeline {
 
         stage('Start app') {
             steps {
-                sh 'nohup npm start > app.log 2>&1 &'
+                cmd 'npm start'
             }
         }
     }
