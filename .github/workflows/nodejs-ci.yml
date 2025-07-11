@@ -13,6 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Run custom greeting action
+        uses: ./.github/actions/say-hello
+        with:
+          username: ${{ github.actor }}
+          
       # Step 1: Checkout code
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,4 +40,4 @@ jobs:
         run: |
           node server.js &
           sleep 5
-          curl -I http://localhost:3000
+          curl -v http://localhost:3000

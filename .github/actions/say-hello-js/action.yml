@@ -1,0 +1,9 @@
+name: "Greeter JS Action"
+description: "Greets the user and checks if name is valid"
+inputs:
+  name:
+    description: "Name of the user"
+    required: true
+runs:
+  using: "node20"
+  main: "index.js"

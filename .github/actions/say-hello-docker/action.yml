@@ -1,0 +1,11 @@
+name: "Security Scanner"
+description: "Scans a directory for secrets (mock)"
+inputs:
+  path:
+    description: "Directory path to scan"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.path }}

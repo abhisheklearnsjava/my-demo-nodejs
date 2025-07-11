@@ -1,0 +1,14 @@
+name: Hello Contributor
+description: Greet the contributor
+inputs:
+  username:
+    description: GitHub username who is performing build
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - run: echo "Hello, @$USERNAME 👋 — thanks for your contribution!"
+      shell: bash
+      env:
+        USERNAME: ${{ inputs.username }}
